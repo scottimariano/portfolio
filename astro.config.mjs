@@ -6,6 +6,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	integrations: [tailwind(), mdx(), image()],
-	site: 'https://scottimariano.github.io',
-	base: '/portfolio',
+	site: 'https://marianoscotti.com',
 });
