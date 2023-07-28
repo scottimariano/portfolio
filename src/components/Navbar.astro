@@ -57,7 +57,7 @@ const menuitems = [
 <script>
 	const downloadButton = document.getElementById('downloadButton');
 	downloadButton.addEventListener('click', () => {
-		const url = `${window.location.pathname}/CV Mariano Scotti.pdf`;
+		const url = `portfolio/${window.location.pathname}/CV Mariano Scotti.pdf`;
 		const xhr = new XMLHttpRequest();
 		xhr.open('GET', url);
 		xhr.responseType = 'blob';
