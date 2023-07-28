@@ -9,6 +9,10 @@ const menuitems = [
 		path: '#about',
 	},
 	{
+		title: 'Stack',
+		path: '#stack',
+	},
+	{
 		title: 'Projects',
 		path: '#projects',
 	},
@@ -22,7 +26,7 @@ const menuitems = [
 <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
-			<Button size={'sm'} name="Download CV">Download CV</Button>
+			<Button id="downloadButton" size={'sm'} name="Download CV">Download CV</Button>
 			<div class="block lg:hidden">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
 			</div>
@@ -49,3 +53,25 @@ const menuitems = [
 		</MenuItems>
 	</Astronav>
 </header>
+
+<script>
+	const downloadButton = document.getElementById('downloadButton');
+	downloadButton.addEventListener('click', () => {
+		const url = `${window.location.origin}/${window.location.pathname}/CV Mariano Scotti.pdf`;
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', url);
+		xhr.responseType = 'blob';
+		xhr.onload = () => {
+			if (xhr.status === 200) {
+				const blob = xhr.response;
+				const link = document.createElement('a');
+				link.href = window.URL.createObjectURL(blob);
+				link.download = 'CV Mariano Scotti.pdf';
+				link.click();
+			} else {
+				console.error('Error downloading file:', xhr.status);
+			}
+		};
+		xhr.send();
+	});
+</script>
