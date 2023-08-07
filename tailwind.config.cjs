@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,6 +17,11 @@ module.exports = {
 			black: '#000',
 			white: '#fff',
 			orange: '#E06330',
+			transparent: 'transparent',
+			gray: colors.gray,
+			emerald: colors.emerald,
+			indigo: colors.indigo,
+			yellow: colors.yellow,
 		},
 		fontFamily: {
 			// Headings
@@ -50,6 +56,6 @@ module.exports = {
 					letterSpacing: theme('letterSpacing.wide'),
 				},
 			});
-		}),
+		})
 	],
 };
