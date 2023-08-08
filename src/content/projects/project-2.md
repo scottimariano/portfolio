@@ -1,7 +1,9 @@
 ---
 inProgress: false
-title: Project title
-img_alt: project image alt text
-link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+title: Let's Cook
+img_alt: Let's Cook
+link: https://letscook.marianoscotti.com
+tags: ['React', 'Redux', 'NodeJs', 'Express', 'PostgreSQL', 'Sequelize']
+imageSource: /letsCook.jpg
+---
 ---
