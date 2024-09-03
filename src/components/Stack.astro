@@ -1,5 +1,5 @@
 ---
-import { Image, useTheme } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 
 import docker from '@assets/logos/dockerResized.png';
@@ -83,8 +83,6 @@ const logos = [
 							src={logo.src}
 							alt={logo.alt}
 							format="png"
-
-							aspectRatio="10:5"
 							loading="eager"
 							class= "m-5 transition duration-300 ease-in-out hover:scale-110 h-8 w-16 md:h-16 md:w-32 lg:h-20 lg:w-40"
 						/>

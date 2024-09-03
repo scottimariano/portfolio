@@ -1,6 +1,6 @@
 ---
 import heroImage from '@assets/images/Mariano Scotti.jpg';
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 import Button from '@components/ui/Button.astro';
 ---
 
@@ -19,7 +19,6 @@ import Button from '@components/ui/Button.astro';
 		<Image
 			src={heroImage}
 			alt="Mariano Scotti"
-			aspectRatio="4:4"
 			format="png"
 			width={400}
 			height={400}

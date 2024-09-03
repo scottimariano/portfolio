@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 import Tags from '@components/ui/Tags.astro';
 interface Props {
 	url?: string;
@@ -24,7 +24,6 @@ const { url = '#', alt = 'Project image', title = 'Project title', tags = ['Tags
 				<Image
 					src={imageSource}
 					alt={alt}
-					aspectRatio="4:4"
 					format="png"
 					width={250}
 					height={250}
